@@ -37,6 +37,8 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies();
+    this.npmInstall([], { save: true });
+    this.npmInstall([], { "save-dev": true });
+    // This.installDependencies();
   }
 };
